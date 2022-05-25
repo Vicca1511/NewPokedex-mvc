@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Lista de Pokemons</title>
+</head>
+<body>
+    
+   
+        <nav>
+
+            <ul>
+              <li><img
+                  src="https://1.bp.blogspot.com/_KBmmkCxTLY8/TMBfCU6xtBI/AAAAAAAAAFI/Ia5W4Suucww/s1600/kawax-pokeball-3097.png"
+                  alt="pokebola"></li>
+              <li><a href="/home">
+                  <h1>Pokedéx</h1>
+                </a></li>
+              <li><a href="/home#cadastro">Cadastro</a></li>
+              <li><a href="/pokemon#cards">Pokemons</a></li>
+        
+            </ul>
+        
+        </nav>
+
+    
+
+
+   
+    
+    <section id="cards">
+        <h2>Lista de Pokemons</h2>
+  
+        <% pokedex.forEach((pokemon)=> { %>
+          <div class="card">
+            <img src="<%= pokemon.imagem %>" alt="" />
+            <h3>
+              <%= pokemon.nome %>
+            </h3>
+            
+            <a href="/detalhes/<%= pokemon.id %>">Editar</a>
+            <a href="/detalhes/<%= pokemon.id %>">Apagar</a>
+          </div>
+          <div class="card__descricao">
+  
+            <p>Descrição: <%= pokemon.descricao %>
+            </p>
+            <p>Tipo: <%= pokemon.tipo %>
+            </p>
+            <p>ID: <%= pokemon.id %>
+            </p>
+            <p>Altura: <%= pokemon.altura %>
+            </p>
+            <p>Peso: <%= pokemon.peso %>
+            </p>
+            <p>Habilidade: <%= pokemon.habilidade %>
+            </p>
+            <p>Categoria: <%= pokemon.categoria %>
+            </p>
+  
+  
+  
+          </div>
+          <% }) %>
+      </section>
+      
+      <footer>
+        <p>Todos os direitos reservados para &copy Lucas Viccari</p>
+        <p>Dados de referência tirados de <a target="_blank" href="https://www.pokemon.com/br/pokedex/">Pokedex</a></p>
+      </footer>
+</body>
+</html>

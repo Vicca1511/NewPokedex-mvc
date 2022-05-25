@@ -1,0 +1,25 @@
+{
+  "name": "newpokedex-mvc",
+  "version": "1.0.0",
+  "description": "Pokedex-mvc",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vicca1511/NewPokedex-mvc.git"
+  },
+  "author": "Lucas Viccari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vicca1511/NewPokedex-mvc/issues"
+  },
+  "homepage": "https://github.com/Vicca1511/NewPokedex-mvc#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
