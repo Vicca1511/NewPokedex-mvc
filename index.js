@@ -4,13 +4,7 @@ const app = express();
 const path = require("path");
 const { runInNewContext } = require("vm");
 
-function Mudarestado(el) {
-  var display = document.getElementById(el).style.display;
-  if(display == "none")
-      document.getElementById(el).style.display = 'block';
-  else
-      document.getElementById(el).style.display = 'none';
-}
+
 
 
 app.set("view engine", "ejs");
@@ -68,7 +62,7 @@ app.post("/create", (req, res) => {
   const pokemon = req.body;
   pokemon.id = pokedex.length + 1;
   pokedex.push(pokemon);
-  res.redirect("/pokemon");
+  res.redirect("/pokemon#cards");
 });
 
 app.get("/detalhes/:id" , (req, res) =>{
@@ -94,4 +88,4 @@ app.listen(3000, () =>{
   console.log("Servidor rodando em http://localhost:3000/home")
   
 });
-
+ 

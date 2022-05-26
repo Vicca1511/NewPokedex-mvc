@@ -12,7 +12,7 @@
 
 nav {
 
-    position:fixed;
+    position: fixed;
     width: 100%;
     align-items: center;
     background: rgb(220, 10, 45);
@@ -52,11 +52,22 @@ nav img {
     width: 3rem;
 }
 
+header {
+    width: 100%;
+}
+
+header img {
+
+    width: 100%;
+    margin-top: 5rem;
+}
+
 section#cards {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: center;
+    background-image: url("https://www.gamingaccessweekly.com/wp-content/uploads/2015/12/pokemon-pikachu-1024x520.png");
 }
 
 section#cards h2 {
@@ -64,7 +75,7 @@ section#cards h2 {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 20rem 35rem 2rem 35rem;
+    margin: 5rem 35rem 2rem 35rem;
     padding: 2rem 0 2rem 0;
     background-color: yellow;
     border-radius: 3rem;
@@ -83,7 +94,7 @@ section#cards h3 {
 
 section#cards div.card {
 
-    
+
     width: 18rem;
     height: 37rem;
     background: radial-gradient(blue, rgb(86, 253, 225));
@@ -95,20 +106,20 @@ section#cards div.card {
 
 section#cards div.card__descricao {
 
-    width: 50%;
+    width: 20%;
     height: 25rem;
-    display: flex;
     justify-content: center;
     flex-wrap: wrap;
     border: solid black;
     border-style: none;
     border-radius: 3rem;
     background: radial-gradient(blue, rgb(86, 253, 225));
-    ;
-
     margin: 2rem;
     padding: 1rem;
+
 }
+
+
 
 section#cards div.card__descricao p {
 
@@ -165,7 +176,7 @@ section#cards div.card a:hover {
     border: solid;
     border-radius: 3rem;
     font-size: 2rem;
-    font-weight:bold;
+    font-weight: bold;
     transition: 0.4s ease-in-out;
 }
 
@@ -175,7 +186,8 @@ section#cards div.card a:hover {
     transition: .4s ease-in-out;
     cursor: pointer;
 }
-#btnHide::after{
+
+#btnHide::after {
     background-color: rgb(66, 5, 5);
 }
 

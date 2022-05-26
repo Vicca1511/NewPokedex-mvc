@@ -26,7 +26,9 @@
         
         </nav>
 
-    
+    <header>
+      <img src="https://pokemongamesharkcodes.files.wordpress.com/2016/09/banner-pokemon.png" alt="banner poekmon">
+    </header>
 
 
    
@@ -45,7 +47,7 @@
             <a href="/detalhes/<%= pokemon.id %>">Apagar</a>
           </div>
           
-          <div style="display: none" class ="card__descricao">
+          <div  style="display:none" class ="card__descricao">
   
             <p>Descrição: <%= pokemon.descricao %>
             </p>
@@ -65,8 +67,8 @@
             
             
           </div>
-          
-          <button id="btnHide" type="button" onclick= "Mudarestado('card')">Mostrar / Esconder</button>
+         
+          <button  id="btnHide" type="button" onclick = " Mudarestado('.card__descricao') ">Mostrar / Esconder</button>
           
           
           <% }) %>
@@ -77,6 +79,6 @@
         <p>Dados de referência tirados de <a target="_blank" href="https://www.pokemon.com/br/pokedex/">Pokedex</a></p>
       </footer>
       
-      
+      <script src="/scrypt.js"></script>
 </body>
 </html>
