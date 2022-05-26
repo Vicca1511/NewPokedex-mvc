@@ -35,7 +35,7 @@
         <h2>Lista de Pokemons</h2>
   
         <% pokedex.forEach((pokemon)=> { %>
-          <div class="card">
+          <div  class="card">
             <img src="<%= pokemon.imagem %>" alt="" />
             <h3>
               <%= pokemon.nome %>
@@ -44,7 +44,8 @@
             <a href="/detalhes/<%= pokemon.id %>">Editar</a>
             <a href="/detalhes/<%= pokemon.id %>">Apagar</a>
           </div>
-          <div class="card__descricao">
+          
+          <div style="display: none" class ="card__descricao">
   
             <p>Descrição: <%= pokemon.descricao %>
             </p>
@@ -61,9 +62,13 @@
             <p>Categoria: <%= pokemon.categoria %>
             </p>
   
-  
-  
+            
+            
           </div>
+          
+          <button id="btnHide" type="button" onclick= "Mudarestado('card')">Mostrar / Esconder</button>
+          
+          
           <% }) %>
       </section>
       
@@ -71,5 +76,7 @@
         <p>Todos os direitos reservados para &copy Lucas Viccari</p>
         <p>Dados de referência tirados de <a target="_blank" href="https://www.pokemon.com/br/pokedex/">Pokedex</a></p>
       </footer>
+      
+      
 </body>
 </html>

@@ -4,6 +4,15 @@ const app = express();
 const path = require("path");
 const { runInNewContext } = require("vm");
 
+function Mudarestado(el) {
+  var display = document.getElementById(el).style.display;
+  if(display == "none")
+      document.getElementById(el).style.display = 'block';
+  else
+      document.getElementById(el).style.display = 'none';
+}
+
+
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
@@ -85,3 +94,4 @@ app.listen(3000, () =>{
   console.log("Servidor rodando em http://localhost:3000/home")
   
 });
+
