@@ -55,7 +55,7 @@ app.get("/home", (req, res) => {
 });
 
 app.get("/pokemon", (req, res) => {
-  res.render("pokemon", { pokedex });
+  res.render("pokemon", { pokedex , pokemon});
 });
 
 app.post("/create", (req, res) => {
@@ -63,6 +63,7 @@ app.post("/create", (req, res) => {
   pokemon.id = pokedex.length + 1;
   pokedex.push(pokemon);
   res.redirect("/pokemon#cards");
+ 
 });
 
 app.get("/detalhes/:id" , (req, res) =>{
@@ -82,6 +83,18 @@ app.post("/update/:id" , (req, res) => {
    
     res.redirect("/pokemon")
     
+})
+
+app.get("/delete/:id" ,(req,res) => {
+  
+  const id = +req.params.id - 1;
+  
+  
+  delete pokedex[id];
+  
+
+  res.redirect("/pokemon#cards");
+
 })
 app.listen(3000, () =>{
 

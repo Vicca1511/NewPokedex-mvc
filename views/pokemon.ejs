@@ -43,8 +43,8 @@
               <%= pokemon.nome %>
             </h3>
             
-            <a href="/detalhes/<%= pokemon.id %>">Editar</a>
-            <a href="/detalhes/<%= pokemon.id %>">Apagar</a>
+            <a id="editar" href="/detalhes/<%= pokemon.id %>">Editar</a>
+            <a id="apagar" href="/delete/<%= pokemon.id %>">Apagar</a>
           </div>
           
           <div  style="display:none" class ="card__descricao">
