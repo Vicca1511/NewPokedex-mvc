@@ -55,7 +55,7 @@ app.get("/home", (req, res) => {
 });
 
 app.get("/pokemon", (req, res) => {
-  res.render("pokemon", { pokedex , pokemon});
+  res.render("pokemon", { pokedex });
 });
 
 app.post("/create", (req, res) => {
@@ -89,3 +89,5 @@ app.listen(3000, () =>{
   
 });
  
+
+

@@ -106,15 +106,16 @@ section#cards div.card {
 
 section#cards div.card__descricao {
 
-    width: 20%;
-    height: 25rem;
-    justify-content: center;
+    display: flex;
     flex-wrap: wrap;
+    width: 50%;
+    height: 35rem;
+    justify-content: center;
     border: solid black;
     border-style: none;
     border-radius: 3rem;
     background: radial-gradient(blue, rgb(86, 253, 225));
-    margin: 2rem;
+    margin: 1rem;
     padding: 1rem;
 
 }
@@ -187,9 +188,7 @@ section#cards div.card a:hover {
     cursor: pointer;
 }
 
-#btnHide::after {
-    background-color: rgb(66, 5, 5);
-}
+
 
 
 footer {

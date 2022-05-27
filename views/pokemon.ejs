@@ -27,7 +27,7 @@
         </nav>
 
     <header>
-      <img src="https://pokemongamesharkcodes.files.wordpress.com/2016/09/banner-pokemon.png" alt="banner poekmon">
+      <img src="https://pokemongamesharkcodes.files.wordpress.com/2016/09/banner-pokemon.png" alt="banner pokemon">
     </header>
 
 
@@ -36,7 +36,7 @@
     <section id="cards">
         <h2>Lista de Pokemons</h2>
   
-        <% pokedex.forEach((pokemon)=> { %>
+        <% pokedex.forEach((pokemon) => { %>
           <div  class="card">
             <img src="<%= pokemon.imagem %>" alt="" />
             <h3>
@@ -64,11 +64,9 @@
             <p>Categoria: <%= pokemon.categoria %>
             </p>
   
-            
-            
           </div>
-         
-          <button  id="btnHide" type="button" onclick = " Mudarestado('.card__descricao') ">Mostrar / Esconder</button>
+          
+          <button value="<%=pokemon.id%>" id="btnHide" type="button" onclick = " Mudarestado('.card__descricao',this.value) ">Atributos</button>
           
           
           <% }) %>
