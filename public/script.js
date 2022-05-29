@@ -1,12 +1,19 @@
-function Mudarestado(el,id) {
+
+function Mudarestado(el, id) {
     id = parseInt(id);
     let display = document.querySelectorAll(el)[id - 1].style.display;
-    console.log(display);
-    if (display == "none"){
+
+    if (display == "none") {
 
         document.querySelectorAll(el)[id - 1].style.display = 'block';
     }
-    else{       
+    else {
         document.querySelectorAll(el)[id - 1].style.display = 'none';
     }
 }
+
+
+
+
+
+

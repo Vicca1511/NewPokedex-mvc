@@ -11,7 +11,7 @@
 }
 
 nav {
-
+    
     position: fixed;
     width: 100%;
     align-items: center;
@@ -59,7 +59,8 @@ header {
 header img {
 
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 6.5rem;
+    border: solid;
 }
 
 section#cards {
@@ -72,9 +73,9 @@ section#cards {
 
 section#cards h2 {
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    width: 100%;
     margin: 5rem 35rem 2rem 35rem;
     padding: 2rem 0 2rem 0;
     background-color: yellow;
@@ -236,4 +237,19 @@ footer p {
     width: 100%;
     font-size: 1.4rem;
     font-weight: 600;
+}
+@media (max-width : 500px) {
+
+nav ul{
+    display:contents;
+   
+    
+}
+header img {
+    margin-top: 40rem;
+}
+footer{
+    height: auto;
+}
+
 }

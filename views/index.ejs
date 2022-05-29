@@ -40,33 +40,34 @@
   <main>
 
     <section id="cadastro">
-
+     
       <% if (pokemon==undefined) { %>
         <h2>Cadastre um novo Pokemon.</h2>
-        <form id="cadastro__form" action="/create" method="post">
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" />
+        <form id="cadastro__form" action="/create" method="post" onsubmit="validar()">
+          
+          <label for="nome" id="labelNome">Nome:</label>
+          <input type="text" id="nome" name="nome"  placeholder="Digite o Nome do Pokemon." required/>
 
-          <label for="tipo">Tipo:</label>
-          <input type="text" id="tipo" name="tipo" />
+          <label for="tipo"id="labelTipo">Tipo:</label>
+          <input type="text" id="tipo" name="tipo" placeholder ="Digite o Tipo do Pokemon." required />
 
-          <label for="Imagem">Imagem:</label>
-          <input type="text" id="imagem" name="imagem" />
+          <label for="Imagem" id="labelImagem">Imagem:</label>
+          <input type="text" id="imagem" name="imagem" placeholder ="Adicione aqui o endereço da imagem do Pokemon." required/>
 
-          <label for="altura">Altura:</label>
-          <input type="text" id="altura" name="altura" />
+          <label for="altura" id="labelAltura">Altura:</label>
+          <input type="text" id="altura" name="altura" placeholder ="Digite a Altura do Pokemon." required/>
 
-          <label for="peso">Peso:</label>
-          <input type="text" id="peso" name="peso" />
+          <label for="peso" id="labelPeso">Peso:</label>
+          <input type="text" id="peso" name="peso" placeholder ="Digite o Peso do Pokemon." required/>
 
-          <label for="descricao">Descrição:</label>
-          <input type="text" id="descricao" name="descricao" />
+          <label for="descricao" id="labelDescricao">Descrição:</label>
+          <input type="text" id="descricao" name="descricao" placeholder ="Digite a Descrição do Pokemon." required/>
 
-          <label for="habilidade">Habilidade:</label>
-          <input type="text" id="habilidade" name="habilidade" d />
+          <label for="habilidade" id="labelHabilidade">Habilidade:</label>
+          <input type="text" id="habilidade" name="habilidade" placeholder ="Digite a Habilidade do Pokemon." required/>
 
-          <label for="categoria">Categoria:</label>
-          <input type="text" id="categoria" name="categoria" />
+          <label for="categoria" id="labelCategoria">Categoria:</label>
+          <input type="text" id="categoria" name="categoria" placeholder ="Digite a Categoria do Pokemon." required/>
 
           <button id="btnCadastrar" type="submit">Cadastrar</button>
         </form>
@@ -115,7 +116,7 @@
     <p>Todos os direitos reservados para &copy Lucas Viccari</p>
     <p>Dados de referência tirados de <a target="_blank" href="https://www.pokemon.com/br/pokedex/">Pokedex</a></p>
   </footer>
- 
+ <script src="/script.js"></script>
 </body>
 
 </html>
