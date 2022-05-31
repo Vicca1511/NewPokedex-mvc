@@ -81,6 +81,7 @@ app.post("/update/:id", (req, res) => {
   newPokemon.id = id + 1;
   pokedex[id] = newPokemon;
   pokemon = undefined;
+  message = `Pokemon atualizado com sucesso`
 
   res.redirect("/pokemon#cards");
 
@@ -92,6 +93,7 @@ app.get("/delete/:id", (req, res) => {
 
 
   delete pokedex[id];
+  message = `Pokemon apagado com sucesso`
 
 
   res.redirect("/pokemon#cards");
