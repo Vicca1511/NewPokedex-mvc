@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="css/style2.css">
     <title>Lista de Pokemons</title>
 </head>
 <body>
@@ -16,10 +16,10 @@
               <li><img
                   src="https://1.bp.blogspot.com/_KBmmkCxTLY8/TMBfCU6xtBI/AAAAAAAAAFI/Ia5W4Suucww/s1600/kawax-pokeball-3097.png"
                   alt="pokebola"></li>
-              <li><a href="/home">
+              <li><a href="/">
                   <h1>Pokedéx</h1>
                 </a></li>
-              <li><a href="/home#cadastro">Cadastro</a></li>
+              <li><a href="/#cadastro">Cadastro</a></li>
               <li><a href="/pokemon#cards">Pokemons</a></li>
         
             </ul>
@@ -31,7 +31,11 @@
     </header>
 
 
-   
+    <% if(message != "") { %>
+      <section id="message">
+        <p><%=message%></p> <span id="close">&times;</span>
+    </section>
+    <% } %>
     
     <section id="cards">
         <h2>Lista de Pokemons</h2>
@@ -77,6 +81,6 @@
         <p>Dados de referência tirados de <a target="_blank" href="https://www.pokemon.com/br/pokedex/">Pokedex</a></p>
       </footer>
       
-      <script src="script.js"></script>
+      <script src="js/script.js"></script>
 </body>
 </html>

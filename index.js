@@ -1,11 +1,9 @@
+let message = ""
 const express = require("express");
 const res = require("express/lib/response");
 const app = express();
 const path = require("path");
 const { runInNewContext } = require("vm");
-
-
-
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
@@ -50,19 +48,21 @@ const pokedex = [
 
 let pokemon = undefined;
 
-app.get("/home", (req, res) => {
-  res.render("index", { pokedex, pokemon });
+app.get("/", (req, res) => {
+  res.render("index", { pokedex, pokemon});
 });
 
 app.get("/pokemon", (req, res) => {
-  res.render("pokemon", { pokedex, pokemon });
+  res.render("pokemon", { pokedex, pokemon , message });
 });
 
 app.post("/create", (req, res) => {
   const pokemon = req.body;
   pokemon.id = pokedex.length + 1;
   pokedex.push(pokemon);
+  message = `Pokemon criado com sucesso`
   res.redirect("/pokemon#cards");
+  
 
 
 });
@@ -72,7 +72,7 @@ app.post("/create", (req, res) => {
 app.get("/detalhes/:id", (req, res) => {
   const id = +req.params.id;
   pokemon = pokedex.find(pokemon => pokemon.id === id);
-  res.redirect("/home#cadastro");
+  res.redirect("/#cadastro");
 })
 
 app.post("/update/:id", (req, res) => {
@@ -82,7 +82,7 @@ app.post("/update/:id", (req, res) => {
   pokedex[id] = newPokemon;
   pokemon = undefined;
 
-  res.redirect("/pokemon")
+  res.redirect("/pokemon#cards");
 
 })
 
@@ -99,7 +99,7 @@ app.get("/delete/:id", (req, res) => {
 })
 app.listen(3000, () => {
 
-  console.log("Servidor rodando em http://localhost:3000/home")
+  console.log("Servidor rodando em http://localhost:3000/")
 
 });
 

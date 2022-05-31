@@ -1,50 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300;1,600;1,700;1,800&display=swap');
 
-*{
-    width: 100%;
+* {
+    
     margin: 0;
     padding: 0;
-    font-family: Open Sans , Arial, Helvetica, sans-serif;
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
-    
+
 }
+
 nav {
-   
-    display:flex;
-    justify-content: flex-start;
+
+    display: flex;
     width: 100%;
     position: fixed;
     z-index: 9999;
     align-items: center;
-    background:  rgb(220, 10, 45);
+    background: rgb(220, 10, 45);
     border-bottom: solid;
-    
+
 }
-nav h1{
+
+nav h1 {
     font-size: 1.2rem;
     color: blanchedalmond;
 }
-nav ul{
 
+nav ul {
+
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav li {
+    margin: 0;
+    padding: 1.5rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    list-style: none;
-    
-    
+
 
 }
-nav ul li {
 
-   padding: 1.5rem;
-   
-   
-   
-}
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: blanchedalmond;
 }
+
 nav img {
     width: 3rem;
 }
@@ -56,11 +59,14 @@ header img {
     margin-top: 5rem;
 
 }
+
 header h1 {
     font-size: 3rem;
-    font-family: Open Sans , Arial;
+    font-family: Open Sans, Arial;
 }
-#cadastro{
+
+
+#cadastro {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -68,59 +74,63 @@ header h1 {
     flex-wrap: wrap;
 }
 
-#cadastro h2{
-    
+#cadastro h2 {
+
     display: flex;
     justify-content: center;
-    width: 50%;
-    margin: 10rem 2rem 2rem 3rem ;
+    width: 70%;
+    margin: 10rem 2rem 2rem 3rem;
     font-size: 2rem;
     text-align: center;
-    background: yellow 2rem 2rem ;
+    background: yellow 2rem 2rem;
     border: solid;
     border-radius: 3rem;
     padding: 1rem;
-    
-    
+
+
 }
-#cadastro #cadastro__form{
+
+#cadastro #cadastro__form {
     display: flex;
-    justify-content:center ;
+    justify-content: center;
     flex-direction: column;
     width: 80%;
     margin: 10rem 15rem 10rem 15rem;
-    
+
 }
 
-#cadastro #cadastro__form label{
+#cadastro #cadastro__form label {
 
-    margin: 2rem 0 0 0 ; 
+    margin: 2rem 0 0 0;
     height: 2rem;
     font-weight: bold;
-    
+
 }
-#cadastro #cadastro__form input{
-    
+
+#cadastro #cadastro__form input {
+
     margin: 0;
     height: 2rem;
-    padding:  0 .9rem;
+    padding: 0 .9rem;
     border-radius: 2rem;
     box-shadow: .2rem .8rem .5rem;
     font-size: 1.1rem;
     outline: none;
-    
-    
+
+
 }
-section#cards{
+
+section#cards {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: center;
     margin: 3rem 0 6rem 0;
 
-    
+
 }
-section#cards h2{
+
+section#cards h2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,43 +141,48 @@ section#cards h2{
     border-radius: 3rem;
     border: solid;
 }
-section#cards h3{
+
+section#cards h3 {
     width: 100%;
     text-align: center;
     font-size: 2rem;
     margin-bottom: 5rem;
     padding: 2rem 0 1rem 0;
     border-radius: 3rem;
-    
+
 }
+
 section#cards div.card {
-    
-    
+
+
     width: 18rem;
     height: 37rem;
-    background: radial-gradient(blue , rgb(86, 253, 225));
+    background: radial-gradient(blue, rgb(86, 253, 225));
     text-align: center;
     margin-left: 10rem;
     margin-top: 10rem;
     border-radius: 3rem;
     box-shadow: 10px 15px 10px grey;
 }
-section#cards div.card__descricao{
-    
+
+section#cards div.card__descricao {
+
     width: 50%;
     height: 25rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    border: solid black ;
+    border: solid black;
     border-style: none;
     border-radius: 3rem;
-    background: radial-gradient(blue , rgb(86, 253, 225)); ;
-    
+    background: radial-gradient(blue, rgb(86, 253, 225));
+    ;
+
     margin: 2rem;
     padding: 1rem;
 }
-section#cards div.card__descricao p{
+
+section#cards div.card__descricao p {
 
     display: flex;
     justify-content: center;
@@ -175,22 +190,25 @@ section#cards div.card__descricao p{
     margin: .5rem;
     padding: 1rem 1rem 1rem 1rem;
     border: solid;
-    background: radial-gradient(rgb(206, 206, 219) , rgb(86, 253, 225));
-    border-style:double;
+    background: radial-gradient(rgb(206, 206, 219), rgb(86, 253, 225));
+    border-style: double;
     border-radius: 3rem;
     border-width: .3em;
 }
+
 section#cards div.card img {
     width: 100%;
 }
-section#cards div.card p{
-    
+
+section#cards div.card p {
+
 
     padding: 1rem;
 }
+
 section#cards div.card a {
- 
-    
+
+
     width: 100%;
     border: solid;
     padding: .8rem;
@@ -202,7 +220,8 @@ section#cards div.card a {
     color: blanchedalmond;
     text-decoration: none;
 }
-section#cards div.card a:hover{
+
+section#cards div.card a:hover {
     transform: scale(1.2);
     transition: .4s ease-in-out;
     background: rgb(0, 89, 255);
@@ -214,16 +233,18 @@ section#cards div.card a:hover{
 
 
 div p {
-    margin:  1rem 0  1rem 0;
-    font-weight: bold ;
+    margin: 1rem 0 1rem 0;
+    font-weight: bold;
     font-size: 1.2rem;
 }
-button{
+
+button {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#btnCadastrar{
+
+#btnCadastrar {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -234,28 +255,42 @@ button{
     font-size: .9rem;
     font-weight: bold;
     color: blanchedalmond;
-    
-}
-#btnCadastrar:hover{
-    transform: scale(1.2);
-    transition: .4s ease-in-out;
-  
 
 }
-footer{
+
+#btnCadastrar:hover {
+    transform: scale(1.2);
+    transition: .4s ease-in-out;
+
+
+}
+
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color:rgb(220, 10, 45) ;
+    background-color: rgb(220, 10, 45);
     width: 100%;
-   
+
 
 
 }
+
 footer p {
     text-align: center;
     width: 100%;
     font-size: 1.4rem;
     font-weight: 600;
+}
+@media (max-width : 450px) {
+
+    nav ul {
+        display: block;
+    }
+    header img {
+        width: 100%;
+        margin-top: 18rem;
+        height: 20rem
+    }
 }

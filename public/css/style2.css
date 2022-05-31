@@ -11,7 +11,7 @@
 }
 
 nav {
-    
+    display: flex;
     position: fixed;
     width: 100%;
     align-items: center;
@@ -36,11 +36,12 @@ nav ul {
 
 }
 
-nav ul li {
-
+nav li {
+    margin: 0;
     padding: 1.5rem;
-
-
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 nav ul li a {
@@ -53,15 +54,36 @@ nav img {
 }
 
 header {
-    width: 100%;
+    display: flex;
 }
 
 header img {
 
     width: 100%;
-    margin-top: 6.5rem;
     border: solid;
 }
+section#message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(251, 92, 0);
+    color: #000000;
+    font-size: 1.1rem;
+    font-weight: 600;
+   
+}
+  
+  span#close {
+    padding:  0 2rem 0 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  span#close:hover{
+    color: rgb(179, 255, 0);
+    transform: scale(1.5);
+  }
 
 section#cards {
     display: flex;
@@ -69,6 +91,7 @@ section#cards {
     flex-wrap: wrap;
     align-items: center;
     background-image: url("https://www.gamingaccessweekly.com/wp-content/uploads/2015/12/pokemon-pikachu-1024x520.png");
+    
 }
 
 section#cards h2 {
@@ -153,7 +176,7 @@ section#cards div.card a#editar {
     justify-content: center;
     margin: 0 auto;
     margin-top: 1rem;
-    width:70%;
+    width: 70%;
     border: none;
     padding: .8rem;
     border-radius: 3rem;
@@ -172,13 +195,14 @@ section#cards div.card a#editar:hover {
     text-decoration: none;
 
 }
+
 section#cards div.card a#apagar {
 
     display: flex;
     justify-content: center;
     margin: 0 auto;
     margin-top: 1rem;
-    width:70%;
+    width: 70%;
     border: none;
     padding: .8rem;
     border-radius: 3rem;
@@ -238,18 +262,41 @@ footer p {
     font-size: 1.4rem;
     font-weight: 600;
 }
-@media (max-width : 500px) {
 
-nav ul{
-    display:contents;
-   
-    
+@media (max-width : 710px) {
+
+    section#cards div.card__descricao{
+        width: 100%;
+    }
+
+
+    div.card__descricao {
+        padding: .8rem;
+    }
 }
-header img {
-    margin-top: 40rem;
+
+@media (max-width : 429px) {
+
+    nav ul {
+        display: contents;
+
+
+    }
+
+    nav ul li {
+
+        padding: 0.3rem;
+
+    }
+
+    footer {
+        height: auto;
+    }
+
 }
-footer{
-    height: auto;
-}
+@media (max-width : 345px){
+    section#cards div.card__descricao{
+        height: 40rem;
+    }
 
 }
