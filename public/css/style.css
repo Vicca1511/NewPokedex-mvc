@@ -119,6 +119,9 @@ header h1 {
 
 
 }
+input:invalid {
+    border: 2px solid red;
+}
 
 section#cards {
     display: flex;
